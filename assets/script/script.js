@@ -137,7 +137,7 @@ rules.forEach(function(rule) {
 
 /*
 * @param rules strings, maximum length
-* @ returns the strings shuffled
+* @ returns the strings shuffled        
 */
 
 function shuffleString(str, maxlength) {

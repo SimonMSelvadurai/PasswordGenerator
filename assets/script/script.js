@@ -26,8 +26,8 @@ function generatePassword()
   return password;
 }
 /**
- * 
- * 
+ * Get the user inputs like, length and character types
+ * @ return user inputs
  */
 function userInputs()
   {
@@ -119,10 +119,7 @@ function generateSecurePassword(length, rules) {
       allMin += rule.min;
       console.log("generateSecurePassword  allMin : ==> " + allMin);
   });
-  
-  // if (length < allMin) {
-  //     length = allMin;
-  // }
+ 
   
   var allCharsLen = allChars.length;
   var minLen = length - allMin;
@@ -147,17 +144,7 @@ function generateSecurePassword(length, rules) {
     if (reminder > 0) {
       rules.push({chars: allChars, min: reminder});
     }
-    // for( j=0; j<allCharsLen; j++)
-    // {
-
-    //   // k = k - allCharsLen;
-    //   if(k == allCharsLen){
-    //     rules.push({chars: allChars, min: allCharsLen});
-    //     console.log("kooooooooooooo" + k );
-    //     allCharsLen= minLen - allCharsLen;
-    //     console.log("allCharsLen   :- " + allCharsLen + ",minLen   :-    "+minLen );
-    //   }
-    // }
+    
   }
 
   
@@ -171,7 +158,7 @@ function generateSecurePassword(length, rules) {
           console.log("generateSecurePassword  pswd : ==> " + pswd);
       }
   });
-  //return pswd;
+  //return pswd after the shuffling operation
   return shuffleString(pswd, length);
 }
 
@@ -183,8 +170,8 @@ rules.forEach(function(rule) {
 }
 
 /*
-*
-*
+* @param rules strings, maximum length
+* @ returns the strings shuffled
 */
 
 function shuffleString(str, maxlength) {

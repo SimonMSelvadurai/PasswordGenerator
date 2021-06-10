@@ -7,7 +7,7 @@ This website is developed using HTML, CSS and Javascript.
 
 Developing this project helps understading the java script window objects,evenlistener,javascript functions.
 
-#installation
+# Installation
 
 Source code can be downloaded from https://github.com/SimonMSelvadurai/PasswordGenerator
 
@@ -23,7 +23,7 @@ This code is responsible to generate the random password. This password has been
 
 
 
-#usage
+# Usage
 
 This project is to generates the unique password, based on the length and character set.
 User will be prompted to choose the inputs by button clicking the Generate Password button.
@@ -31,7 +31,7 @@ User will be shown the window prompt to specify the total number of characters.
 User then propmted to decide atleast one charater set in the password.
 System will generate the password in combination of having atleast 1 character from the character set.
 
-#credits
+# Credits
 
 The following websites was used as reference to build this website.
 
@@ -45,6 +45,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-#license
+# License
 
 This is the open source project. User can make use of this to have required password generated.

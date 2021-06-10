@@ -21,7 +21,6 @@ function generatePassword()
   var length = userinputs[0];
   // generate the password passing the length and rules as parameter
   var password = generateSecurePassword(length, rules);
-  console.log("generatePassword   >>>> password    : " + password);
   return password;
 }
 /**
@@ -34,7 +33,6 @@ function userInputs()
     var lengthInput=0;
     do {
         lengthInput = window.prompt("Please choose a length between 8-128 charaters for a Password");
-        console.log("lengthInput " + lengthInput);
     } while((lengthInput < 8) || (lengthInput >128));
 
 
@@ -90,7 +88,6 @@ function userInputs()
  */
 
 function generateSecurePassword(length, rules) {
-  console.log(" generateSecurePassword >>>> length   : ==> " + length);
   var allChars = "", allMin = 0;
   rules.forEach(function(rule) {
       allChars += rule.chars;
@@ -107,7 +104,6 @@ function generateSecurePassword(length, rules) {
         rules.push({chars: allChars, min: minLen});
   }
   else{
-    console.log(" else            : ");
     var reminder = minLen % allCharsLen;
     var quotient = (minLen - reminder) / allCharsLen;
     for (; k < quotient; k++) {
@@ -145,13 +141,10 @@ rules.forEach(function(rule) {
 */
 
 function shuffleString(str, maxlength) {
-  console.log("shuffleString  maxlength : ==> " + maxlength);
-  console.log("shuffleString  str : ==> " + str);
   var shuffledString = str.split('').sort(function(){
     return 0.5-Math.random()}).join('');
   if (maxlength > 0) {
       shuffledString = shuffledString.substr(0, maxlength);
   }
-  console.log("shuffleString  shuffledString shuffledString shuffledString : ==> " + shuffledString);
   return shuffledString;
 }

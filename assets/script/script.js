@@ -30,6 +30,10 @@ function userInputs() {
   var password;
   var lengthInput = 0;
   var isValid = false;
+  var lower ;
+ var numeric;
+ var upper;
+  var special;
   do {
     lengthInput = parseInt(
       window.prompt(
@@ -39,25 +43,23 @@ function userInputs() {
     if (
       lengthInput < 8 ||
       lengthInput > 128 ||
-      isNaN(lengthInput) ||
-      lengthInput % 1 != 0
+      isNaN(lengthInput)
+      
     ) {
-      lengthInput = alert(
-        "Please choose a valid number between 8-128 charaters for a Password"
-      );
+      alert("Please choose a valid number between 8-128 charaters for a Password");
     } else {
       isValid = true;
     }
   } while (!isValid);
 
   do {
-    var lower = window.confirm("Would you like to choose lowercase character");
-    var upper = window.confirm("Would you like to choose uppercase character");
-    var numeric = window.confirm("Would you like to choose numeric character");
-    var special = window.confirm("Would you like to choose special character");
+     lower = window.confirm("Would you like to choose lowercase character");
+     upper = window.confirm("Would you like to choose uppercase character");
+     numeric = window.confirm("Would you like to choose numeric character");
+     special = window.confirm("Would you like to choose special character");
     if (!(lower || upper || numeric || special)) {
-      lengthInput = alert("Please choose a anyone of the charater set ");
-      isValid = false;
+        alert("Please choose atleast one charater set ");
+        isValid = false;
     } else {
       isValid = true;
     }
@@ -66,13 +68,6 @@ function userInputs() {
   return [lengthInput, lower, upper, numeric, special];
 }
 
-function validateForNumeric() {
-  var validator = /^[0-9]+$/g;
-  var nums = window.prompt("Please prompt any Numeric Number");
-  if (validator.test(nums)) {
-    specialChars();
-  }
-}
 /**
  * @param  array of userinputs
  * @returns rules
